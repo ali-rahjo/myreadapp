@@ -1,3 +1,29 @@
+# My Read App
+This is a Command Line Application that helps keep track of readers and their reading engagement.
+
+## Database Mission Statement
+The purpose of the My Read App Database is to maintain the data of our readers, and to supply information that supports the engagement of the reader.
+
+## Database Mission Objectives
+1. List title of all ebooks read by Dr
+2. How many books are there?
+3. How many readers are done reading at least one book?
+4. How many books do we have per category?
+5. How many books do we have per read status?
+
+## How to run
+Before running this application, you should first setup the virtual environment, database, environment variables, install packages and optionally add fake data.
+
+### Set up database
+
+**NB**: Open a terminal from the `db` folder in the working directory
+
+```sql
+-- Start psql shell from any database and superuser. Preferably postgres
+psql -U postgres
+
+-- Create the database 
+CREATE DATABASE myreadapp;
 
 -- Connect to the database
 \c myreadapp
@@ -49,10 +75,3 @@ From the working directly, run the following command
 $ python3 -m src.main
 ```
 You will be presented with a menu. Continue by selecting the options you want.
-
-
-
-
-
-
-
