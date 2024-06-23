@@ -2,8 +2,9 @@ import psycopg as pg
 import environs 
 from src.utils import ROOT_DIR
 
-# setup 
+# Set up the envirrons 
 env = environs.Env()
+
 env.read_env(str(ROOT_DIR / '.env'))
 
 # Singleton
@@ -21,8 +22,8 @@ class Database(object):
             # host = 'localhost'
             dbname = env.str('db_name'),
             user = env.str('db_user'),
-            password = env.str('db_password'),
-            port = 5438
+            password = env.str('db_password')
+            # port = 5438
         )
 
 if __name__ == '__main__':

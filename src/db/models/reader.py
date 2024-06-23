@@ -1,0 +1,17 @@
+from typing import Optional
+from src.db.queries import reader as reader_quireis
+
+class Reader:
+    # Shape data returned by our queries
+    def __init__(self, username: str, title: str, first_name: str, last_name: str) -> None:
+        self.username = username
+        self.title = title
+        self.first_name = first_name
+        self.last_name = last_name
+
+
+    @classmethod
+    def insert_data(cls,username: str, title: str, first_name: str, last_name: str) -> Optional['Reader']:
+        reader: tuple[str] = reader_quireis.insert_data(username, title, first_name, last_name)
+
+        return cls(*reader) if reader else None

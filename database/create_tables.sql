@@ -58,26 +58,6 @@ CREATE TABLE status_percent (
 
 INSERT INTO status_percent(percentage_read_range, read_status)
 VALUES('[0,0]', 'pending'),
-        ('[1,99]', 'reading'),
-        ('[100,100]', 'done');
-
-
-
-
-
-
-
-
-
-
-
-Message codes
-
-
-
-
-
-
-
-
+      ('[1,99]', 'reading'),
+      ('[100,100]', 'done');
 
